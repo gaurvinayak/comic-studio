@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  @apply bg-slate-950 font-sans text-slate-100;
+  background-image:
+    radial-gradient(1200px 600px at 15% -10%, rgba(99, 102, 241, 0.12), transparent 60%),
+    radial-gradient(1000px 500px at 110% 0%, rgba(236, 72, 153, 0.10), transparent 55%);
+  background-attachment: fixed;
+}
+
+/* Halftone dot texture utility for that comic feel */
+.halftone {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+/* Thin custom scrollbars */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-slate-700;
+}
+*::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-600;
+}
